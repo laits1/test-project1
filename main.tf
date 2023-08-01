@@ -1,13 +1,13 @@
 provider "google" {
   credentials = file("/home/thsehdrl94/test/jenkins-sa.json")
   project     = "test-project1-394523"
-  region      = "asia-northeast1"  # 원하는 리전으로 변경
+  region      = "asia-northeast3"  # 원하는 리전으로 변경
 }
 
 resource "google_compute_instance" "default" {
   name         = "terraform"
   machine_type = "n1-standard-1"
-  zone         = "asia-northeast1-a"  # 원하는 존으로 변경
+  zone         = "asia-northeast3-a"  # 원하는 존으로 변경
 
   boot_disk {
     initialize_params {
